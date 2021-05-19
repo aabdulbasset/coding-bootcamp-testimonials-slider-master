@@ -7,12 +7,12 @@ $(".button").click(function(){
 
         console.log(defaultText)
         console.log($(".person-image"))
-        $(".person-image")[0].src = "../slider/image-tanya.jpg"
+        $(".person-image")[0].src = "slider/image-tanya.jpg"
         $(".article-text").text("“ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”")
         $(".name").text("Tanya Sinclair")
         $(".job").text("UX Engineer")
     }else{
-        $(".person-image")[0].src = "../slider/image-john.jpg"
+        $(".person-image")[0].src = "slider/image-john.jpg"
         $(".article-text").text(defaultText)
         $(".name").text(defaultName)
         $(".job").text(defaultJob)
