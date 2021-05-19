@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.body-container {
+  display: flex;
+  background-color: white;
+  padding: 13vh 11.5vw;
+  height: 87vh;
+  padding-bottom: 0;
+  background: url("../images/pattern-quotes.svg") no-repeat 20% 25%, url("../images/pattern-bg.svg") no-repeat 90% 23%, url("../images/pattern-curve.svg") no-repeat bottom left;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 540px;
+  grid-template-areas: "text image";
+  align-items: center;
+}
+
+.card-image {
+  grid-area: image;
+  position: relative;
+  box-shadow: 4px 17px 41px -6px gray;
+  height: 540px;
+  background-image: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
+}
+.card-image img:nth-child(1) {
+  border-radius: 0.35em;
+}
+
+.card-text {
+  grid-column: 1/3;
+  grid-row: 1/1;
+  z-index: 2;
+  color: #202046;
+  font-weight: 300;
+  font-size: 32px;
+  width: 53%;
+}
+
+.button-container {
+  position: absolute;
+  background-color: white;
+  border-radius: 2em;
+  left: 10%;
+  top: 510px;
+}
+.button-container .button {
+  padding: 1.2em;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+.author {
+  display: flex;
+  padding-top: 30px;
+}
+
+.job {
+  margin-left: 10px;
+  color: #babacf;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 1024px) {
+  .body-container {
+    padding: 2vh 3vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .body-container {
+    background-position: 54% 66%, 34% 26%, bottom left;
+    background-size: 17%, 100%, 100%;
+  }
+
+  .card {
+    grid-template-areas: "image" "text";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .card-text {
+    grid-area: text;
+  }
+
+  .button-container {
+    top: 90%;
+    left: 35%;
+  }
+
+  .card-text {
+    width: 100%;
+  }
+
+  .article-text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .author {
+    flex-direction: column;
+    text-align: center;
+  }
+  .author .name, .author .job {
+    font-size: 20px;
+  }
+
+  .card-image {
+    grid-area: image;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .card-image .person-image {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
